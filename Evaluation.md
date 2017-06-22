@@ -20,7 +20,8 @@ Réponses aux questions posées
 Q1)
 	Utiliser une boucle foreach pour parcourir les operateurs et une interface.	
 Q2)
-	La programmation orienté par les tests (TDD).
+	old_anwser : La programmation orienté par les tests (TDD).
+	new_answer : Le concepte de MVC ?
 Q3)
 	C'est le principe des interfaces.
 Q4)

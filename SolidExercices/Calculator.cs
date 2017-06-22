@@ -10,22 +10,21 @@ namespace SolidExercices
     {
         public double Calculate(string operation)
         {
-            //
+            //supprime les espace vide dans l'operation
             operation = operation.Replace(" ", string.Empty);
-            String currentOperator;
             Double result = 0;
 
             string[] numbers = null;
 
-            string[] operators = {"+", "-", "*", "/"};
+            //string[] operators = {"+", "-", "*", "/"};
 
-            foreach (var op in operators)
-            {
-                if (operation.Contains(op))
-                {
+            //foreach (var op in operators)
+            //{
+            //    if (operation.Contains(op))
+            //    {
 
-                }
-            }
+            //    }
+            //}
 
             //vérifie l'operateur et effectue le calcul
             if (operation.Contains('+'))
@@ -60,6 +59,7 @@ namespace SolidExercices
             return result;
         }
 
+        //refacto en cours ...
         public Double Sum(string operation)
         {
             try
@@ -76,6 +76,7 @@ namespace SolidExercices
             }
         }
 
+        //pour test seulement
         public Double CheatedCalculate(string operation)
         {
             double result = (double)new DataTable().Compute(operation, null);
