@@ -17,8 +17,16 @@ namespace SolidExercices
             //vérifie l'operateur et effectue le calcul
             if (operation.Contains('+'))
             {
-                numbers = operation.Split('+');
-                result = Convert.ToDouble(numbers[0]) + Convert.ToDouble(numbers[1]);
+                try
+                {
+                    numbers = operation.Split('+');
+                    result = Convert.ToDouble(numbers[0]) + Convert.ToDouble(numbers[1]);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("L'addition ne fonctionne pas.");
+                    throw;
+                }
 
             } else if (operation.Contains("-"))
             {
