@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace SolidExercices
@@ -7,7 +8,18 @@ namespace SolidExercices
     {
         public double Calculate(string operation)
         {
-            throw new NotImplementedException();
+
+            List<double> numberArray = new List<double>();
+            Double result = 0;
+
+            string[] numbers = operation.Split('+');
+
+            foreach (string num in numbers)
+            {
+                result += Convert.ToDouble(num);
+            }
+
+            return result;
         }
     }
 }
