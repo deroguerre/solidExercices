@@ -14,6 +14,7 @@ namespace SolidExercices
 
             string[] numbers = null;
 
+            //vérifie l'operateur et effectue le calcul
             if (operation.Contains('+'))
             {
                 numbers = operation.Split('+');
@@ -23,6 +24,20 @@ namespace SolidExercices
             {
                 numbers = operation.Split('-');
                 result = Convert.ToDouble(numbers[0]) - Convert.ToDouble(numbers[1]);
+            }
+            else if (operation.Contains("*"))
+            {
+                numbers = operation.Split('*');
+                result = Convert.ToDouble(numbers[0]) * Convert.ToDouble(numbers[1]);
+            }
+            else if (operation.Contains("/"))
+            {
+                numbers = operation.Split('/');
+                result = Convert.ToDouble(numbers[0]) / Convert.ToDouble(numbers[1]);
+            }
+            else
+            {
+                Console.Write("L'opérateur de calcul est manquant !");
             }
 
             //foreach (string num in numbers)
