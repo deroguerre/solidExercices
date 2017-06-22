@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace SolidExercices
 {
@@ -9,10 +10,22 @@ namespace SolidExercices
     {
         public double Calculate(string operation)
         {
+            //
+            operation = operation.Replace(" ", string.Empty);
             String currentOperator;
             Double result = 0;
 
             string[] numbers = null;
+
+            string[] operators = {"+", "-", "*", "/"};
+
+            foreach (var op in operators)
+            {
+                if (operation.Contains(op))
+                {
+
+                }
+            }
 
             //vérifie l'operateur et effectue le calcul
             if (operation.Contains('+'))
@@ -45,7 +58,7 @@ namespace SolidExercices
             }
             else
             {
-                Console.Write("L'opérateur de calcul est manquant !");
+                Console.Write("L'opérateur de calcul est manquant ou incorrect!\n");
             }
 
             //foreach (string num in numbers)

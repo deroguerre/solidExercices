@@ -6,6 +6,7 @@ namespace SolidExercices.Tests
     public class CalculatorShould
     {
         readonly Calculator _calculator = new Calculator();
+        readonly CalculatorTrainer _calculatorTrainer = new CalculatorTrainer();
 
         [Test]
         public void CalculateASum()
@@ -33,6 +34,12 @@ namespace SolidExercices.Tests
         {
             var result = _calculator.Calculate("9/3");
             Check.That(result).IsEqualTo(3);
+        }
+
+        [Test]
+        public void CalculateOperationInArray()
+        {
+            _calculatorTrainer.Run();
         }
 
         //[Test]

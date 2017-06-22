@@ -18,14 +18,15 @@ Réponses aux questions posées
 -----------------------------
 
 Q1)
-
+	Utiliser une boucle foreach pour parcourir les operateurs et une interface.	
 Q2)
-
+	La programmation orienté par les tests (TDD).
 Q3)
-
+	C'est le principe des interfaces.
 Q4)
-
+	La methode run de la class calculator trainer ne prend pas de parametre, on ne peux donc pas lui spécifier de nouveaux calcul.
+	La methode ne retourne aucun resultat
 Q5)
-
+	Le principe c'est de la refactorisation.
 Q6)
- 
+	C'est de l'héritage.
