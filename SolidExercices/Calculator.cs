@@ -30,16 +30,7 @@ namespace SolidExercices
             //vérifie l'operateur et effectue le calcul
             if (operation.Contains('+'))
             {
-                try
-                {
-                    numbers = operation.Split('+');
-                    result = Convert.ToDouble(numbers[0]) + Convert.ToDouble(numbers[1]);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine("L'addition ne fonctionne pas.");
-                    throw;
-                }
+                result = Sum(operation);
 
             } else if (operation.Contains("-"))
             {
@@ -67,6 +58,22 @@ namespace SolidExercices
             //}
 
             return result;
+        }
+
+        public Double Sum(string operation)
+        {
+            try
+            {
+                string[] numbers = null;
+                numbers = operation.Split('+');
+                Double result = Convert.ToDouble(numbers[0]) + Convert.ToDouble(numbers[1]);
+                return result;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
         public Double CheatedCalculate(string operation)
