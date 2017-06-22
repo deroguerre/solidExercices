@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 
 namespace SolidExercices
@@ -8,17 +9,33 @@ namespace SolidExercices
     {
         public double Calculate(string operation)
         {
-
-            List<double> numberArray = new List<double>();
+            String currentOperator;
             Double result = 0;
 
-            string[] numbers = operation.Split('+');
+            string[] numbers = null;
 
-            foreach (string num in numbers)
+            if (operation.Contains('+'))
             {
-                result += Convert.ToDouble(num);
+                numbers = operation.Split('+');
+                result = Convert.ToDouble(numbers[0]) + Convert.ToDouble(numbers[1]);
+
+            } else if (operation.Contains("-"))
+            {
+                numbers = operation.Split('-');
+                result = Convert.ToDouble(numbers[0]) - Convert.ToDouble(numbers[1]);
             }
 
+            //foreach (string num in numbers)
+            //{
+            //    result += Convert.ToDouble(num);
+            //}
+
+            return result;
+        }
+
+        public Double CheatedCalculate(string operation)
+        {
+            double result = (double)new DataTable().Compute(operation, null);
             return result;
         }
     }
